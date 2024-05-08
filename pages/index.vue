@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { SectionContact } from '#build/components';
-
 const isHidden = ref(true);
 
 // スクロールイベントをハンドリングする関数
@@ -33,6 +31,7 @@ onUnmounted(() => {
     <SectionCompany />
     <SectionRecruit />
     <SectionContact />
+    <SectionFooter />
   </div>
 </template>
 

@@ -11,12 +11,14 @@ $minViewport: 768;
   --light-purple: #a798b7;
   --pale-purple : #f1ebf8;
   --black       : #333333;
+  --dark-black   : #120e19;
   --darkgray    : #e8e8e8;
   --lightgray   : #f0f0f0;
   --white       : #ffffff;
   --base-color  : var(--white);
   --main-color  : var(--purple);
   --text-color  : var(--black);
+  --button-gradient: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
 
 
   // --hover-color      : var(--black);
@@ -27,8 +29,12 @@ $minViewport: 768;
   // --transparent-color: #ffffff66;
   
   // FONT
-  --fs-link             : 14px;
-  --fs-section-heading            : #{calcClamp(36, 30, $minViewport, $maxViewport)};
+  --fs-link           : 14px;
+  --fs-section-heading: #{calcClamp(30, 36, $minViewport, $maxViewport)};
+  --fs-service-title  : #{calcClamp(18, 24, $minViewport, $maxViewport)};
+
+  --fs-medium: #{calcClamp(14, 15, $minViewport, $maxViewport)};
+  --fs-min   : 10px;
 
   
   
@@ -37,7 +43,7 @@ $minViewport: 768;
   // --fs-larger            : #{calcClamp(18, 22, $minViewport, $maxViewport)};
   // --fs-max               : #{calcClamp(20, 28, $minViewport, $maxViewport)};
   // --fs-smaller           : #{calcClamp(11, 12, $minViewport, $maxViewport)};
-  // --fs-min               : 10px;
+
   --line-height-tight    : 1.12;
   --line-height-narrow   : 1.4;
   --line-height-normal   : 1.6;
@@ -58,7 +64,7 @@ $minViewport: 768;
   --mobile-lower-width   : 430px;
   --tablet-lower-width   : 740px;
   --desktop-lower-width  : 980px;
-  --contents-max-width   : 1440px;
+  --contents-max-width   : 1140px;
   --global-header-height : calc(var(--bv) * 8);
   --global-sub-nav-height: calc(var(--bv) * 6);
   --z-index-max          : 100;

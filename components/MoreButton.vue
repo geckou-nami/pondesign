@@ -4,20 +4,22 @@
 
 <template>
   <a :class="$style.button_container">
-      CONTACT
+      MORE
   </a>
 </template>
 
 <style lang="scss" module>
 .button_container {
-  padding      : var(--sp-medium) calc(var(--sp-large) * 2.5);
-  color        : var(--white);
-  border       : 1px solid var(--white);
-  border-radius: 50px;
-  font-size    : var(--fs-link);
-  font-weight  : bold;
-  cursor       : pointer;
-  position     : relative;
+  padding         : var(--sp-medium) calc(var(--sp-large) * 2.5);
+  color           : var(--white);
+  background-image: var(--button-gradient);
+  background-size : 200% auto;
+  border-radius   : 50px;
+  font-size       : var(--fs-link);
+  font-weight     : bold;
+  cursor          : pointer;
+  position        : relative;
+  transition      : all 0.3s;
 
   &::after {
     content    : '▶︎';
@@ -28,6 +30,10 @@
     margin-left: var(--sp-large);
     transition : all 0.3s;
   }
+
+  &:hover {
+    background-position: right center;
+  } 
 
   &:hover::after {
     margin-left: calc(var(--sp-large) + 5px);
