@@ -60,13 +60,10 @@ const serviceContents = [
 @use '~/assets/scss/mixin' as *;
 
 .services_card {
-  width: 100%;
-  max-width     : var(--contents-max-width);
+  @include contentInner;
   display       : flex;
   gap           : var(--sp-larger);
-  padding-inline: var(--sp-large);
   margin-block  : calc(var(--sp-large) * 2);
-  margin-inline: auto;
 
   @include mediaScreen('tablet') {
     flex-direction: column;

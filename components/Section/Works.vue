@@ -51,35 +51,30 @@ const worksContents = [
 <style lang="scss" module>
 @use '~/assets/scss/mixin' as *;
 
-.works_container {
-  /* padding: var(--sp-large); */
-}
 
 .works_contents {
-  width: 100%;
-  max-width: var(--contents-max-width);
-  display: grid;
+  @include contentInner;
+  display              : grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-large);
-  padding:var(--sp-large);
-  margin-inline: auto;
+  gap                  : var(--sp-large);
+  padding-block        : var(--sp-large);
 
   @include mediaScreen('tablet') {
     grid-template-columns: 1fr;
-    padding-inline: var(--sp-medium)
+    padding-inline       : var(--sp-medium)
   }
 
 }
 
 .works_card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
   justify-content: center;
-  gap: var(--sp-medium);
+  gap            : var(--sp-medium);
 
   >img {
-    width: 100%;
+    width : 100%;
     border: solid 1px var(--lightgray);
 
   }

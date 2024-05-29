@@ -1,10 +1,15 @@
 <script lang="ts" setup>
+const props = withDefaults(defineProps<{
+  label: string;
+}>(), {
+  label: 'MORE' // ここでデフォルト値を設定
+});
 
 </script>
 
 <template>
   <a :class="$style.button_container">
-      MORE
+      {{ label }}
   </a>
 </template>
 
