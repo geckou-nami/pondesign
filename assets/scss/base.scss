@@ -87,7 +87,10 @@ legend {
   padding: 0;
 }
 
-input,
+input {
+  color           : var(--text-color);
+}
+
 option,
 button,
 select {

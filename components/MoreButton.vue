@@ -15,6 +15,7 @@ const props = withDefaults(defineProps<{
 
 <style lang="scss" module>
 .button_container {
+  width: 220px;
   padding         : var(--sp-medium) calc(var(--sp-large) * 2.5);
   color           : var(--white);
   background-image: var(--button-gradient);

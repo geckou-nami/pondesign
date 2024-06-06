@@ -30,6 +30,9 @@ const profiles = [
       :heading="'COMPANY'"
       :subheading="'私たちについて'"
     />
+    <BreadcrumbList
+      :currentSection="'COMPANY'"
+    />
     <div :class="$style.message">
       <div :class="$style.message_inner">
         <div :class="$style.message_contents">

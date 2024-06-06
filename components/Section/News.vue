@@ -8,6 +8,9 @@
       :heading="'NEWS'"
       :subheading="'お知らせ'"
     />
+    <BreadcrumbList
+      :currentSection="'NEWS'"
+    />
   </div>
 </template>
 

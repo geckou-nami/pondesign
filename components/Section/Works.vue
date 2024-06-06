@@ -35,6 +35,9 @@ const worksContents = [
       :heading="'WORKS'"
       :subheading="'制作実績'"
     />
+    <BreadcrumbList
+      :currentSection="'WORKS'"
+    />
     <div :class="$style.works_contents">
       <div
         :class="$style.works_card"

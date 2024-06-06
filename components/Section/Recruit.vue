@@ -35,6 +35,9 @@ const JobInformation = [
       :heading="'RECRUIT'"
       :subheading="'採用情報'"
     />
+    <BreadcrumbList
+      :currentSection="'RECRUIT'"
+    />
     <div :class="$style.recruit_container">
       <div :class="$style.recruit_title_wrap">
         <h3>Enjoy Creation for Client</h3>

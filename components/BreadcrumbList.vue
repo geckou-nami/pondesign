@@ -1,0 +1,41 @@
+
+<script lang="ts" setup>
+const props = defineProps<{
+  currentSection: string
+}>()
+
+// ゆくゆくは、リンクの情報も、propsで受け取るようにする
+
+</script>
+
+<template>
+  <nav>
+    <ol :class="$style.breadcrumb">
+      <li><a href="/">HOME</a></li>
+      <li>></li>
+      <li><a href="/.../">{{ currentSection }}</a></li>
+    </ol>
+  </nav>
+</template>
+
+<style lang="scss" module>
+@use '~/assets/scss/mixin' as *;
+
+nav {
+  width: 100%;
+  background-color: var(--lightgray);
+  padding-block: calc(var(--sp-medium) * 0.8);
+}
+
+.breadcrumb {
+  @include contentInner;
+  padding-inline: 0;
+  font-size: var(--fs-small);
+  display: flex;
+  gap: var(--sp-small);
+  
+
+}
+
+
+</style>
