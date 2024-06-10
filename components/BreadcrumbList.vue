@@ -5,7 +5,6 @@ const props = defineProps<{
 }>()
 
 // ゆくゆくは、リンクの情報も、propsで受け取るようにする
-
 </script>
 
 <template>
@@ -22,20 +21,16 @@ const props = defineProps<{
 @use '~/assets/scss/mixin' as *;
 
 nav {
-  width: 100%;
+  width           : 100%;
   background-color: var(--lightgray);
-  padding-block: calc(var(--sp-medium) * 0.8);
+  padding-block   : calc(var(--sp-medium) * 0.8);
 }
 
 .breadcrumb {
   @include contentInner;
-  padding-inline: 0;
-  font-size: var(--fs-small);
-  display: flex;
-  gap: var(--sp-small);
-  
-
+  padding-inline: var(--sp-medium);
+  font-size     : var(--fs-small);
+  display       : flex;
+  gap           : var(--sp-small);
 }
-
-
 </style>

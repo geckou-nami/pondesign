@@ -4,7 +4,14 @@
 
 <template>
   <div>
-    hero
+    <SubHero
+      :heading="'RECRUIT'"
+      :subheading="'採用情報'"
+    />
+    <BreadcrumbList
+      :currentSection="'RECRUIT'"
+    />
+    <SectionRecruit />
   </div>
 
 </template>

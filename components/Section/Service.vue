@@ -35,13 +35,6 @@ const serviceContents = [
 
 <template>
   <div :class="$style.services_container"> 
-    <SubHero
-      :heading="'SERVICE'"
-      :subheading="'事業案内'"
-    />
-    <BreadcrumbList
-      :currentSection="'SERVICE'"
-    />
     <div  
       :class="$style.services_card"
       v-for="serviceContent in serviceContents"

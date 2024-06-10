@@ -13,7 +13,10 @@
         <span :class="$style.break" />
         Webサイトを制作
       </P>
-      <ContactButton />
+      <CommonButton
+        :label="'CONTACT'"
+        style="--button-border-color: var(--white); --button-gradient: transparent;"
+      />      
     </div>
   </div>
 </template>
@@ -44,7 +47,7 @@
 }
 
 .hero_title {
-    //tablet以下の場合、font-size: 48px;したいためあえてpxで指定
+    //tablet以下の場合、font-size: 40px;にぱっきと切り替えしたいためあえてpxで指定
   font-size    : 72px;
   color        : var(--white);
   margin-bottom: var(--sp-medium);

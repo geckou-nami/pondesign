@@ -4,7 +4,14 @@
 
 <template>
   <div>
-    hero
+    <SubHero
+      :heading="'CONTACT'"
+      :subheading="'お問い合わせ'"
+    />
+    <BreadcrumbList
+      :currentSection="'CONTACT'"
+    />
+    <SectionContact />
   </div>
 
 </template>

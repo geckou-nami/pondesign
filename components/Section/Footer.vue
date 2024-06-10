@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-import Contact from '~/pages/contact.vue';
-import SectionHeading from '../SectionHeading.vue';
-import ContactButton from '../ContactButton.vue';
-
+import {navItems} from '~/assets/const/nav-items'
 
 </script>
 
@@ -15,17 +12,18 @@ import ContactButton from '../ContactButton.vue';
         :color="'var(--purple)'"
       />
       <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
-      <MoreButton />
+      <CommonButton />
     </div>
     <div :class="$style.footer_menu">
       <ul>
-        <li><a href=""></a>HOME</li>
-        <li><a href="">NEWS</a></li>
-        <li><a href="">SERVICES</a></li>
-        <li><a href="">WORKS</a></li>
-        <li><a href="">COMPANY</a></li>
-        <li><a href="">RECRUIT</a></li>
-        <li><a href="">CONTACT</a></li>
+        <li
+          v-for="item in navItems"
+          :key="item.name"
+        >
+          <NuxtLink :to="item.path">
+            {{ item.name }}
+          </NuxtLink>
+        </li>
       </ul>
       <p :class="$style.copyright">
         ©PON DESIGN
@@ -38,8 +36,6 @@ import ContactButton from '../ContactButton.vue';
 @use '~/assets/scss/mixin' as *;
 
 .footer_container {
-  width           : 100%;
-  height          : 100%;
   background-color: var(--lightgray);
 }
 

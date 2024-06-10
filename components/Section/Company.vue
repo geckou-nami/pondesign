@@ -26,46 +26,35 @@ const profiles = [
 
 <template>
   <div :class="$style.company_container">
-    <SubHero
-      :heading="'COMPANY'"
-      :subheading="'私たちについて'"
-    />
-    <BreadcrumbList
-      :currentSection="'COMPANY'"
-    />
-    <div :class="$style.message">
-      <div :class="$style.message_inner">
-        <div :class="$style.message_contents">
-          <h3 :class="$style.contents_heading">メッセージ</h3>
-          <div :class="$style.message_heading">
-            <span>サイトのゴール=</span><br><span>夢を叶えること</span>
-          </div>
-          <p :class="$style.message_text">
-            お客様の夢を叶えること。<br>
-            それがWebサイトのゴールであり、私たちが目指すことです。<br>
-            だからこそちゃんと成果を出すサイトを全力でお作りします。<br>
-            お客様の笑顔を見たい。<br>
-            夢を実現する手助けをさせてください。
-          </p>
-        </div>
-        <div :class="$style.greeting_wrap">
-          <div :class="$style.img_wrap">
-            <img src="assets/images/ceo.jpg" alt="CEO紹介写真">
-          </div>
-          <div :class="$style.greeting_text">
-            <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-              テキストが入りますテキストが入りますテキストが入りますテキストが入ります
-            </p>
-            <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-              テキストが入りますテキストが入りますテキストが入ります
-            </p>
-            <p>代表取締役社長 猫山ポン太郎</p>
-          </div>
-        </div>
+    <div :class="$style.message_contents">
+      <h3 :class="$style.contents_heading">メッセージ</h3>
+      <div :class="$style.message_heading">
+        <span>サイトのゴール=</span><br><span>夢を叶えること</span>
+      </div>
+      <p :class="$style.message_text">
+        お客様の夢を叶えること。<br>
+        それがWebサイトのゴールであり、私たちが目指すことです。<br>
+        だからこそちゃんと成果を出すサイトを全力でお作りします。<br>
+        お客様の笑顔を見たい。<br>
+        夢を実現する手助けをさせてください。
+      </p>
+    </div>
+    <div :class="$style.greeting_contents">
+      <div :class="$style.img_wrap">
+        <img src="assets/images/ceo.jpg" alt="CEO紹介写真">
+      </div>
+      <div :class="$style.greeting_text">
+        <p>
+          テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+          テキストが入りますテキストが入りますテキストが入りますテキストが入ります
+        </p>
+        <p>
+          テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+          テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+          テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+          テキストが入りますテキストが入りますテキストが入ります
+        </p>
+        <p>代表取締役社長 猫山ポン太郎</p>
       </div>
     </div>
     <div :class="$style.company_profile">
@@ -89,24 +78,20 @@ const profiles = [
 <style lang="scss" module>
 @use '~/assets/scss/mixin' as *;
 
-.company_container {
-  width: 100%;
-}
-
 .contents_heading {
   @include contentsHeading;
   margin-bottom: var(--sp-medium);
-  padding-top: var(--sp-large);
+  padding-top  : var(--sp-large);
 }
 
 .message_contents {
-  width        : 100%;
-  height             : 100%;
+  @include contentInner;
+  width              : 100%;
   background-image   : url('assets/images/bg-circle.png'), url('assets/images/bg-face.png');
   background-position: center center;
   background-repeat  : no-repeat;
   background-size    : contain;
-  padding-block: var(--sp-larger);
+  padding-block      : var(--sp-larger);
 
   @include mediaScreen('tablet') {
     background-image: url('assets/images/bg-circle.png');
@@ -114,10 +99,10 @@ const profiles = [
 }
 
 .message_heading {
-  font-size    : var(--fs-larger);
-  font-weight  : bold;
-  text-align   : center;
-  line-height: var(--line-height-narrow);
+  font-size     : var(--fs-larger);
+  font-weight   : bold;
+  text-align    : center;
+  line-height   : var(--line-height-narrow);
   letter-spacing: 0.15em;
   
   br {
@@ -137,7 +122,7 @@ const profiles = [
 }
 
 .message_text {
-  text-align: center;
+  text-align  : center;
   margin-block: var(--sp-large);
 }
 
@@ -145,8 +130,8 @@ const profiles = [
   @include contentInner;
 }
 
-.greeting_wrap {
-  width: 100%;
+.greeting_contents {
+  @include contentInner;
   display   : flex;
   gap       : var(--sp-large);
   margin-top: var(--sp-large);
@@ -158,9 +143,9 @@ const profiles = [
 }
 
 .greeting_text {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  gap: var(--sp-large);
+  gap           : var(--sp-large);
 
   p {
     font-size  : var(--fs-medium);
@@ -177,27 +162,23 @@ const profiles = [
 }
 
 // 会社概要
-
 .company_profile {
   width        : 100%;
   max-width    : var(--contents-max-width);
   padding      : var(--sp-large);
   margin-inline: auto;
-
-
 }
 
 .profile_list {
-  display: grid;
+  display              : grid;
   grid-template-columns: 1fr 3fr;
-  gap: var(--sp-medium);
-  border-bottom: 1px solid var(--gray);
-  padding-block: var(--sp-large);
+  gap                  : var(--sp-medium);
+  border-bottom        : 1px solid var(--gray);
+  padding-block        : var(--sp-large);
 
   @include mediaScreen('tablet') {
     grid-template-columns: 1fr;
   }
-
 
   dt {
     font-weight: bold;
@@ -209,7 +190,7 @@ const profiles = [
   text-align: center;
 
   iframe {
-    width: 100%;
+    width : 100%;
     height: 400px;
   }
 }

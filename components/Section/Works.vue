@@ -31,13 +31,6 @@ const worksContents = [
 
 <template>
   <div  :class="$style.works_container">
-    <SubHero
-      :heading="'WORKS'"
-      :subheading="'制作実績'"
-    />
-    <BreadcrumbList
-      :currentSection="'WORKS'"
-    />
     <div :class="$style.works_contents">
       <div
         :class="$style.works_card"
@@ -47,7 +40,7 @@ const worksContents = [
         <img :src="workContent.image" alt="イメージ画像" />
         <a href="">{{ workContent.title }}</a>
       </div>
-  </div>
+    </div>
   </div>
 </template>
 
@@ -66,7 +59,6 @@ const worksContents = [
     grid-template-columns: 1fr;
     padding-inline       : var(--sp-medium)
   }
-
 }
 
 .works_card {
@@ -79,7 +71,6 @@ const worksContents = [
   >img {
     width : 100%;
     border: solid 1px var(--lightgray);
-
   }
 }
 </style>

@@ -4,7 +4,14 @@
 
 <template>
   <div>
-    hero
+    <SubHero
+      :heading="'COMPANY'"
+      :subheading="'私たちについて'"
+    />
+    <BreadcrumbList
+      :currentSection="'COMPANY'"
+    />
+    <SectionCompany />
   </div>
 
 </template>

@@ -4,9 +4,15 @@
 
 <template>
   <div>
-    ここぺーじになる
+    <SubHero
+      :heading="'NEWS'"
+      :subheading="'お知らせ'"
+    />
+    <BreadcrumbList
+      :currentSection="'NEWS'"
+    />
+    <SectionNews />
   </div>
-
 </template>
 
 <style lang="scss" module>

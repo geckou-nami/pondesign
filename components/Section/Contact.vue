@@ -45,13 +45,6 @@ const inputFields = [
 
 <template>
   <div :class="$style.contact_container">
-    <SubHero
-      :heading="'CONTACT'"
-      :subheading="'お問い合わせ'"
-    />
-    <BreadcrumbList
-      :currentSection="'CONTACT'"
-    />
     <div :class="$style.form_contents">
       <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
       <!-- form -->
@@ -120,7 +113,7 @@ const inputFields = [
             <option value="friend">友人や知人</option>
             <option value="other">その他</option>
           </select>
-          <MoreButton
+          <CommonButton
             :label="'送信する'"
             :class="$style.submit_button"
           />
@@ -131,10 +124,6 @@ const inputFields = [
 
 <style lang="scss" module>
 @use '~/assets/scss/mixin' as *;
-
-.contact_container {
-
-}
 
 .form_contents {
   @include contentInner;
@@ -151,17 +140,22 @@ form {
   display         : flex;
   flex-direction  : column;
   background-color: var(--gray-medium);
-  padding-block: calc(var(--sp-medium) * 4);
-  padding-inline       : calc(var(--sp-medium) * 6);
-  margin-block: var(--sp-large);
+  padding-block   : calc(var(--sp-medium) * 4);
+  padding-inline  : calc(var(--sp-medium) * 6);
+  margin-block    : var(--sp-large);
   margin-inline   : auto;
+
+  @include mediaScreen('tablet') {
+    padding-block : calc(var(--sp-medium) * 2);
+    padding-inline: calc(var(--sp-medium) * 2);
+  }
 
 }
 
 .form_title {
   font-size    : var(--sp-medium);
   font-weight  : bold;
-  margin-top: var(--sp-large);
+  margin-top   : var(--sp-large);
   margin-bottom: var(--sp-small);
 }
 
@@ -184,15 +178,27 @@ form {
 .input {
   @include formContents;
   width: 300px;
+
+  @include mediaScreen('tablet') {
+    width: 100%;
+  }
 }
 
 textarea {
   @include formContents;
+
+  @include mediaScreen('tablet') {
+    width: 100%;
+  }
 }
 
 select {
   @include formContents;
   width: 300px;
+
+  @include mediaScreen('tablet') {
+    width: 100%;
+  }
 }
 
 .required_item {
@@ -209,5 +215,9 @@ select {
 .submit_button {
   margin-top: var(--sp-larger);
   align-self: center;
+
+  @include mediaScreen('tablet') {
+    margin-top: var(--sp-large);
+  }
 }
 </style>
