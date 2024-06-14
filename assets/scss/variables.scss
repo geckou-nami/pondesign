@@ -6,20 +6,20 @@ $minViewport: 768;
 
 :root {
   // COLOR
-  --purple      : #391e88;
-  --dark-purple : #21054d;
-  --light-purple: #a798b7;
-  --pale-purple : #f1ebf8;
-  --black       : #333333;
-  --dark-black   : #120e19;
-  --darkgray    : #e8e8e8;
-  --gray-medium: #f7f7f7;
-  --gray: #dddddd;
-  --lightgray   : #f0f0f0;
-  --white       : #ffffff;
-  --base-color  : var(--white);
-  --main-color  : var(--purple);
-  --text-color  : var(--black);
+  --purple         : #391e88;
+  --dark-purple    : #21054d;
+  --light-purple   : #a798b7;
+  --pale-purple    : #f1ebf8;
+  --black          : #333333;
+  --dark-black     : #120e19;
+  --darkgray       : #e8e8e8;
+  --gray-medium    : #f7f7f7;
+  --gray           : #dddddd;
+  --lightgray      : #f0f0f0;
+  --white          : #ffffff;
+  --base-color     : var(--white);
+  --main-color     : var(--purple);
+  --text-color     : var(--black);
   --button-gradient: linear-gradient(to right, #7633a4 0%, #250d65 51%, #7633a4 100%);
 
 
@@ -74,6 +74,7 @@ $minViewport: 768;
   --contents-max-width   : 1140px;
   --global-header-height : calc(var(--bv) * 8);
   --global-sub-nav-height: calc(var(--bv) * 6);
+  --carousel-button-size : #{calcClamp(60, 80, $minViewport, $maxViewport)};
   --z-index-max          : 100;
   --z-index-overlay      : 90;
   --z-index-tooltip      : 80;

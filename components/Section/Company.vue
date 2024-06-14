@@ -26,19 +26,7 @@ const profiles = [
 
 <template>
   <div :class="$style.company_container">
-    <div :class="$style.message_contents">
-      <h3 :class="$style.contents_heading">メッセージ</h3>
-      <div :class="$style.message_heading">
-        <span>サイトのゴール=</span><br><span>夢を叶えること</span>
-      </div>
-      <p :class="$style.message_text">
-        お客様の夢を叶えること。<br>
-        それがWebサイトのゴールであり、私たちが目指すことです。<br>
-        だからこそちゃんと成果を出すサイトを全力でお作りします。<br>
-        お客様の笑顔を見たい。<br>
-        夢を実現する手助けをさせてください。
-      </p>
-    </div>
+    <CompanyMessage />
     <div :class="$style.greeting_contents">
       <div :class="$style.img_wrap">
         <img src="assets/images/ceo.jpg" alt="CEO紹介写真">

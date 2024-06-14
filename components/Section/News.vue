@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const props = defineProps<{
+  maxArticles: number;
+}>()
+
 const newsArticle = [
   {
     date: '2030.01.20',
@@ -13,7 +17,7 @@ const newsArticle = [
   {
     date: '2030.01.20',
     category: '採用',
-    title: 'Webデザイナーを１名募集中です！'
+    title: 'Webデザイナーを1名募集中です!'
   },
   {
     date: '2030.01.31',
@@ -47,7 +51,7 @@ const newsArticle = [
     <div :class="$style.news_container">
       <ul
         :class="$style.news_list"
-        v-for="article in newsArticle"
+        v-for="(article, index) in newsArticle.slice(0, props.maxArticles)"
         :key="article.title"  
       > 
         <li>

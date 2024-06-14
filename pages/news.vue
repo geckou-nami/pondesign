@@ -11,7 +11,9 @@
     <BreadcrumbList
       :currentSection="'NEWS'"
     />
-    <SectionNews />
+    <SectionNews
+      :maxArticles="10"
+    />
   </div>
 </template>
 
