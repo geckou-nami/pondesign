@@ -18,6 +18,9 @@
         style="--button-border-color: var(--white); --button-gradient: transparent;"
       />      
     </div>
+    <span :class="$style.scroll">
+      SCROLL
+    </span>
   </div>
 </template>
 
@@ -75,4 +78,46 @@
     display: block;
   }
 }
+
+.scroll {
+  display        : inline-block;
+  position       : absolute;
+  right          : 20px;
+  bottom         : 0;
+  color          : #fff;
+  padding        : 10px 10px 90px;
+  writing-mode   : vertical-lr;
+  font-size      : var(--fs-small);
+
+  &::after {
+    position  : absolute;
+    bottom    : 0;
+    left      : 50%;
+    width     : 1px;
+    height    : 80px;
+    background: #fff;
+    content   : "";
+    animation : scrollDownLine 1.5s infinite;
+  }
+}
+
+@keyframes scrollDownLine {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
 </style>

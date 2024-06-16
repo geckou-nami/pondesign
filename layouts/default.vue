@@ -23,6 +23,7 @@ onUnmounted(() => {
       :class="$style.header"
       :isTransparent="isHidden"
     />
+    <HamburgerMenu :class="$style.hamburger_menu"/>
     <SectionContainer>
       <slot />
     </SectionContainer>
@@ -31,8 +32,6 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" module>
-@use '~/assets/scss/mixin' as *;
-
 .header {
   position: fixed;
   top:0;

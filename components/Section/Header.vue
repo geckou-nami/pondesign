@@ -22,7 +22,7 @@ const props = defineProps<{
     <div :class="$style.menu_list">
       <ul>
         <li>
-          <NuxtLink
+          <NuxtLink 
             v-for="item in navItems.filter(item => item.name !== 'HOME')"
             :key="item.name"
             :to="item.path"
@@ -36,6 +36,7 @@ const props = defineProps<{
 </template>
 
 <style lang="scss" module>
+@use '~/assets/scss/mixin' as *;
 
 .header_container {
   width           : 100%;
@@ -45,6 +46,7 @@ const props = defineProps<{
   padding         : calc(var(--sp-medium) * 1.2) var(--sp-large);
   background-color: var(--dark-purple);
   transition      : background-color .2s ease;
+  z-index: var(--z-index-header);
 
   &.hidden {
     background-color: transparent;
@@ -52,6 +54,11 @@ const props = defineProps<{
 }
 
 .menu_list {
+  display: block;
+
+  @include mediaScreen('tablet') {
+    display: none;
+  }
 
   li {
     color      : var(--white);
