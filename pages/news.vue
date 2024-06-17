@@ -3,18 +3,11 @@
 </script>
 
 <template>
-  <div>
-    <SubHero
-      :heading="'NEWS'"
-      :subheading="'お知らせ'"
-    />
-    <BreadcrumbList
-      :currentSection="'NEWS'"
-    />
+  <NuxtLayout name="section-page"> 
     <SectionNews
       :maxArticles="10"
     />
-  </div>
+  </NuxtLayout>
 </template>
 
 <style lang="scss" module>

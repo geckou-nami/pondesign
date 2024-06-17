@@ -47,7 +47,7 @@ onUnmounted(() => {
         horizontalCard
         index
       />
-      <CommonButton />
+      <CommonButton :to="'/service'"/>
     </section>
     <section>
       <WorksTopPage />
@@ -72,27 +72,27 @@ onUnmounted(() => {
 
 section {
   padding-block: calc(var(--sp-large) * 2);
-  text-align: center;
+  text-align   : center;
 }
 
 .page_top {
-  display: grid;
-  place-items: center;
-  width: 50px;
-  aspect-ratio: 1/1;
-  background: rgba(255, 255, 255, 0.8);
+  display      : grid;
+  place-items  : center;
+  width        : 50px;
+  aspect-ratio : 1/1;
+  background   : rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
-  position: fixed;
-  bottom: 45px;
-  right: 45px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
-  visibility: visible;
+  filter       : drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
+  position     : fixed;
+  bottom       : 45px;
+  right        : 45px;
+  cursor       : pointer;
+  transition   : all 0.5s ease-in-out;
+  opacity      : 1;
+  visibility   : visible;
 
   &.hidden {
-    opacity: 0;
+    opacity   : 0;
     visibility: hidden;
   }
 

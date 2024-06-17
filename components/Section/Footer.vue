@@ -12,7 +12,7 @@ import {navItems} from '~/assets/const/nav-items'
         :color="'var(--purple)'"
       />
       <p>Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
-      <CommonButton />
+      <CommonButton :to="'/contact'"/>
     </div>
     <div :class="$style.footer_menu">
       <ul>

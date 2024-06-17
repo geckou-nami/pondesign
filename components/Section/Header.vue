@@ -43,7 +43,7 @@ const props = defineProps<{
   display         : flex;
   justify-content : space-between;
   align-items     : center;
-  padding         : calc(var(--sp-medium) * 1.2) var(--sp-large);
+  padding         : var(--sp-medium) var(--sp-large);
   background-color: var(--dark-purple);
   transition      : background-color .2s ease;
   z-index: var(--z-index-header);

@@ -11,7 +11,7 @@
         :color="'var(--purple)'"
       />
     <p>私たちを一緒に働きませんか？</p>
-    <CommonButton />
+    <CommonButton :to="'/recruit'"/>
   </div>
   <div :class="$style.img_wrap">
     <img src="assets/images/recruit.jpg" alt="">

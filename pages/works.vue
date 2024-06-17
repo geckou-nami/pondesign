@@ -3,17 +3,9 @@
 </script>
 
 <template>
-  <div>
-    <SubHero
-      :heading="'WORKS'"
-      :subheading="'制作実績'"
-    />
-    <BreadcrumbList
-      :currentSection="'WORKS'"
-    />
+  <NuxtLayout name="section-page"> 
     <SectionWorks />
-  </div>
-
+  </NuxtLayout>
 </template>
 
 <style lang="scss" module>

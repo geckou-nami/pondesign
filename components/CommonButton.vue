@@ -1,16 +1,24 @@
 <script lang="ts" setup>
+
 const props = withDefaults(defineProps<{
   label: string;
+  to?: string;
 }>(), {
   label: 'MORE' // ここでデフォルト値を設定
 });
 
+const click = () => {
+  
+}
 </script>
 
 <template>
-  <a :class="$style.button_container">
-      {{ label }}
-  </a>
+  <NuxtLink
+    :to="to"
+    :class="$style.button_container"
+  >
+    {{ label }}
+  </NuxtLink>
 </template>
 
 <style lang="scss" module>

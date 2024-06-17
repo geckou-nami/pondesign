@@ -15,6 +15,7 @@
       </P>
       <CommonButton
         :label="'CONTACT'"
+        :to="'/contact'"
         style="--button-border-color: var(--white); --button-gradient: transparent;"
       />      
     </div>

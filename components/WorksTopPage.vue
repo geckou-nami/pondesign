@@ -42,7 +42,7 @@ const worksImages = [
     <p>様々なジャンルのWebサイト制作が可能です。<br>
       ご購入やお申込み数の増加などを実現します！
     </p>
-    <CommonButton />
+    <CommonButton :to="'/works'"/>
     </div>
   </div>
 </template>

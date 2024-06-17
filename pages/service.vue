@@ -3,16 +3,9 @@
 </script>
 
 <template>
-  <div>
-    <SubHero
-      :heading="'SERVICE'"
-      :subheading="'事業案内'"
-    />
-    <BreadcrumbList
-      :currentSection="'SERVICE'"
-    />
+  <NuxtLayout name="section-page"> 
     <SectionService />
-  </div>
+  </NuxtLayout>
 </template>
 
 <style lang="scss" module>

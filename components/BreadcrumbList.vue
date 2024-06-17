@@ -12,7 +12,7 @@ const props = defineProps<{
     <ol :class="$style.breadcrumb">
       <li><a href="/">HOME</a></li>
       <li>></li>
-      <li><a href="/.../">{{ currentSection }}</a></li>
+      <li>{{ currentSection }}</li>
     </ol>
   </nav>
 </template>
@@ -24,6 +24,7 @@ nav {
   width           : 100%;
   background-color: var(--lightgray);
   padding-block   : calc(var(--sp-medium) * 0.8);
+  z-index: calc(var(--z-index-header) - 1);
 }
 
 .breadcrumb {

@@ -53,6 +53,7 @@ const JobInformation = [
       <CommonButton
         :class="$style.recruit_button"
         :label="'応募する'"
+        :to="''"
       />
       <p  :class="$style.btn_text">求人サイトへ遷移します</p>
     </div>
