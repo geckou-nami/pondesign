@@ -26,7 +26,7 @@ onUnmounted(() => {
 <template>
   <div>
     <SectionHero />
-    <section>
+    <section :class="$style.news_section">
       <SectionHeading
         :heading="'NEWS'"
         :subheading="'お知らせ'"
@@ -34,6 +34,7 @@ onUnmounted(() => {
       />
       <SectionNews 
         :maxArticles="3"
+        :indexStyle="true"
       />
     </section>
     <section>
@@ -73,6 +74,17 @@ onUnmounted(() => {
 section {
   padding-block: calc(var(--sp-large) * 2);
   text-align   : center;
+}
+
+.news_section {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  gap            : calc(var(--sp-large) * 2);
+
+  @include mediaScreen('tablet') {
+    flex-direction: column;
+  }
 }
 
 .page_top {

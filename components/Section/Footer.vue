@@ -1,11 +1,19 @@
 <script lang="ts" setup>
-import {navItems} from '~/assets/const/nav-items'
+import { useRoute } from 'vue-router'
+import { navItems } from '~/assets/const/nav-items'
 
+const route = useRoute()
+
+// 現在のルートが'/contact'かどうかを判定
+const isContactPage = computed(() => route.path === '/contact')
 </script>
 
 <template>
   <div :class="$style.footer_container">
-    <div :class="$style.contact_link">
+    <div
+      v-if="!isContactPage"
+      :class="$style.contact_link"
+    >
       <SectionHeading 
         :heading="'CONTACT'"
         :subheading="'お問い合わせ'"

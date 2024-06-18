@@ -53,7 +53,7 @@ const worksContents = [
   display              : grid;
   grid-template-columns: repeat(3, 1fr);
   gap                  : var(--sp-large);
-  padding-block        : var(--sp-large);
+  padding-block        : calc(var(--sp-large) * 3);
 
   @include mediaScreen('tablet') {
     grid-template-columns: 1fr;

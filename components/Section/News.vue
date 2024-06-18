@@ -1,6 +1,9 @@
 <script lang="ts" setup>
+import type Index from '~/pages/index.vue';
+
 const props = defineProps<{
   maxArticles: number;
+  indexStyle?: boolean;
 }>()
 
 const newsArticle = [
@@ -48,7 +51,8 @@ const newsArticle = [
 </script>
 
 <template>
-    <div :class="$style.news_container">
+    <div
+      :class="[$style.news_container, indexStyle ? $style.index_style : '']">
       <ul
         :class="$style.news_list"
         v-for="(article, index) in newsArticle.slice(0, props.maxArticles)"
@@ -73,6 +77,12 @@ const newsArticle = [
   @include contentInner;
   max-width    : 780px;
   margin-block: calc(var(--sp-large) * 2);
+}
+
+.index_style {
+  width  : auto;
+  margin : 0;
+  padding: 0;
 }
 
 .news_list {
