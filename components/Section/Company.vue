@@ -20,8 +20,7 @@ const profiles = [
     title: '所在地',
     text: '〒555-5555 東京都千代田区 ポンビルディング 606'
   }
-];
-
+]
 </script>
 
 <template>
@@ -68,13 +67,13 @@ const profiles = [
 
 .contents_heading {
   @include contentsHeading;
-  margin-bottom: var(--sp-medium);
-  padding-top  : var(--sp-large);
+  margin-block-end   : var(--sp-medium);
+  padding-block-start: var(--sp-large);
 }
 
 .message_contents {
   @include contentInner;
-  width              : 100%;
+  inline-size        : 100%;
   background-image   : url('assets/images/bg-circle.png'), url('assets/images/bg-face.png');
   background-position: center center;
   background-repeat  : no-repeat;
@@ -120,9 +119,9 @@ const profiles = [
 
 .greeting_contents {
   @include contentInner;
-  display   : flex;
-  gap       : var(--sp-large);
-  margin-top: var(--sp-large);
+  display           : flex;
+  gap               : var(--sp-large);
+  margin-block-start: var(--sp-large);
 
   @include mediaScreen('tablet') {
     flex-direction: column;
@@ -145,16 +144,16 @@ const profiles = [
   flex: 0 0 40%;
 
   > img {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
-// 会社概要
+  // 会社概要
 .company_profile {
-  width        : 100%;
-  max-width    : var(--contents-max-width);
-  padding      : var(--sp-large);
-  margin-inline: auto;
+  inline-size    : 100%;
+  max-inline-size: var(--contents-max-width);
+  padding        : var(--sp-large);
+  margin-inline  : auto;
 }
 
 .profile_list {
@@ -174,12 +173,12 @@ const profiles = [
 }
 
 .map {
-  margin-top: var(--sp-large);
-  text-align: center;
+  margin-block-start: var(--sp-large);
+  text-align        : center;
 
   iframe {
-    width : 100%;
-    height: 400px;
+    inline-size: 100%;
+    block-size : 400px;
   }
 }
 </style>

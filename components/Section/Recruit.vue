@@ -94,7 +94,7 @@ const JobInformation = [
   clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);
 
   img {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
@@ -118,9 +118,9 @@ const JobInformation = [
   }
 
   h4 {
-    text-align   : center;
-    font-size    : 24px;
-    margin-bottom: var(--sp-large);
+    text-align      : center;
+    font-size       : 24px;
+    margin-block-end: var(--sp-large);
   }
 }
 
@@ -142,17 +142,17 @@ const JobInformation = [
 }
 
 .recruit_button {
-  margin-top: var(--sp-large);
+  margin-block-start: var(--sp-large);
 }
 
 .btn_text {
-  margin-top: var(--sp-small);
-  font-size : var(--fs-small);
+  margin-block-start: var(--sp-small);
+  font-size         : var(--fs-small);
 }
 
-  // 社内ムービー
+    // 社内ムービー
 .recruit_movie {
-  width       : 100%;
+  inline-size : 100%;
   aspect-ratio: 16 / 9;
 }
 </style>

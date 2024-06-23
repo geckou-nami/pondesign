@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import type Index from '~/pages/index.vue';
-
 const props = defineProps<{
-  maxArticles: number;
-  indexStyle?: boolean;
+  maxArticles: number
+  indexStyle?: boolean
 }>()
 
 const newsArticle = [
@@ -75,14 +73,14 @@ const newsArticle = [
 
 .news_container {
   @include contentInner;
-  max-width    : 780px;
-  margin-block: calc(var(--sp-large) * 2);
+  max-inline-size: 780px;
+  margin-block   : calc(var(--sp-large) * 2);
 }
 
 .index_style {
-  width  : auto;
-  margin : 0;
-  padding: 0;
+  inline-size: auto;
+  margin     : 0;
+  padding    : 0;
 }
 
 .news_list {

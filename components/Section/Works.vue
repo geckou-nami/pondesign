@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import smoothiestaImage from '~/assets/images/smoothiesta.jpg';
-import webConferenceImage from '~/assets/images/web-conference.jpg';
-import laminaImage from '~/assets/images/lamina.jpg';
-import citylabImage from '~/assets/images/citylab.jpg';
-import tabilogImage from '~/assets/images/tabilog.jpg';
+import smoothiestaImage from '~/assets/images/smoothiesta.jpg'
+import webConferenceImage from '~/assets/images/web-conference.jpg'
+import laminaImage from '~/assets/images/lamina.jpg'
+import citylabImage from '~/assets/images/citylab.jpg'
+import tabilogImage from '~/assets/images/tabilog.jpg'
 
 const worksContents = [
   {
@@ -26,7 +26,7 @@ const worksContents = [
     image: tabilogImage,
     title: 'TABILOG 様',
   },
-];
+]
 </script>
 
 <template>
@@ -69,8 +69,8 @@ const worksContents = [
   gap            : var(--sp-medium);
 
   >img {
-    width : 100%;
-    border: solid 1px var(--lightgray);
+    inline-size: 100%;
+    border     : solid 1px var(--lightgray);
   }
 }
 </style>

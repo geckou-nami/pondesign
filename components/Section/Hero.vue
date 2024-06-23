@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
   <div :class="$style.hero_container">
     <div :class="$style.hero_content">
@@ -29,8 +25,8 @@
 @use '~/assets/scss/mixin' as *;
 
 .hero_container {
-  width              : 100%;
-  height             : 100svh;
+  inline-size        : 100%;
+  block-size         : 100svh;
   background-image   : url('assets/images/hero.jpg');
   background-size    : cover;
   background-position: center;
@@ -51,10 +47,10 @@
 }
 
 .hero_title {
-    //tablet以下の場合、font-size: 40px;にぱっきと切り替えしたいためあえてpxで指定
-  font-size    : 72px;
-  color        : var(--white);
-  margin-bottom: var(--sp-medium);
+      //tablet以下の場合、font-size: 40px;にぱっきと切り替えしたいためあえてpxで指定
+  font-size       : 72px;
+  color           : var(--white);
+  margin-block-end: var(--sp-medium);
 
   @include mediaScreen('tablet') {
     font-size  : 40px;
@@ -63,9 +59,9 @@
 }
 
 .hero_subtitle {
-  font-size    : 24px;
-  color        : var(--white);
-  margin-bottom: calc(var(--sp-large) * 2);
+  font-size       : 24px;
+  color           : var(--white);
+  margin-block-end: calc(var(--sp-large) * 2);
 
   @include mediaScreen('tablet') {
     font-size: 16px;
@@ -81,24 +77,24 @@
 }
 
 .scroll {
-  display        : inline-block;
-  position       : absolute;
-  right          : 20px;
-  bottom         : 0;
-  color          : #fff;
-  padding        : 10px 10px 90px;
-  writing-mode   : vertical-lr;
-  font-size      : var(--fs-small);
+  display     : inline-block;
+  position    : absolute;
+  right       : 20px;
+  bottom      : 0;
+  color       : #fff;
+  padding     : 10px 10px 90px;
+  writing-mode: vertical-lr;
+  font-size   : var(--fs-small);
 
   &::after {
-    position  : absolute;
-    bottom    : 0;
-    left      : 50%;
-    width     : 1px;
-    height    : 80px;
-    background: #fff;
-    content   : "";
-    animation : scrollDownLine 1.5s infinite;
+    position   : absolute;
+    bottom     : 0;
+    left       : 50%;
+    inline-size: 1px;
+    height     : 80px;
+    background : #fff;
+    content    : "";
+    animation  : scrollDownLine 1.5s infinite;
   }
 }
 
@@ -120,5 +116,4 @@
     transform-origin: 0 100%;
   }
 }
-
 </style>

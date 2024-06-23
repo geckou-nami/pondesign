@@ -41,7 +41,7 @@ const serviceContents = [
 const getFirstSentence = (text: string): string => {
   const firstSentence = text.split('n/')[0]; // n/タグで区切られた最初の文を取得
   return firstSentence;
-};
+}
 </script>
 
 <template>
@@ -79,13 +79,11 @@ const getFirstSentence = (text: string): string => {
   }
 }
 
-
-
 .services_image {
   flex: 0 1 40%;
 
   >img {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
@@ -126,8 +124,8 @@ const getFirstSentence = (text: string): string => {
   margin-block    : 0;
 
   h3 {
-    text-align   : center;
-    margin-bottom: var(--sp-small);
+    text-align      : center;
+    margin-block-end: var(--sp-small);
   }
 }
 </style>

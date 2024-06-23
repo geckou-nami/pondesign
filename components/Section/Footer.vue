@@ -73,8 +73,7 @@ const isContactPage = computed(() => route.path === '/contact')
       @include mediaScreen('tablet') {
         display: flex;
         flex-wrap: wrap;
-        justify-content: left;
-        
+        justify-content: left;      
     }
   }
 }

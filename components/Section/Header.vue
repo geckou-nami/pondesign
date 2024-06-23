@@ -3,8 +3,7 @@ import { navItems } from '~/assets/const/nav-items'
 
 const props = defineProps<{
   isTransparent: boolean;
-}>();
-
+}>()
 </script>
 
 <template>
@@ -39,14 +38,14 @@ const props = defineProps<{
 @use '~/assets/scss/mixin' as *;
 
 .header_container {
-  width           : 100%;
+  inline-size     : 100%;
   display         : flex;
   justify-content : space-between;
   align-items     : center;
   padding         : var(--sp-medium) var(--sp-large);
   background-color: var(--dark-purple);
   transition      : background-color .2s ease;
-  z-index: var(--z-index-header);
+  z-index         : var(--z-index-header);
 
   &.hidden {
     background-color: transparent;
@@ -71,12 +70,12 @@ const props = defineProps<{
 }
 
 .menu {
-  position: relative;
-  width   : 100%;
+  position   : relative;
+  inline-size: 100%;
 
   &:hover::before {
     content                  : '';
-    width                    : 100%;
+    inline-size                    : 100%;
     height                   : 1px;
     background-color         : var(--white);
     position                 : absolute;
@@ -90,10 +89,10 @@ const props = defineProps<{
 
 @keyframes hoverAnime {
   0% {
-    width: 0;
+    inline-size: 0;
   }
   100% {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 </style>

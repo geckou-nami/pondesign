@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
 <div :class="$style.container">
   <div :class="$style.cta_text">

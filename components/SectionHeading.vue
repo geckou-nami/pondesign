@@ -5,7 +5,7 @@ const props = withDefaults(defineProps<{
   color: string
 }>(), {
   color: 'var(--white)'
-});
+})
 </script>
 
 <template>

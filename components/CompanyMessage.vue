@@ -37,13 +37,13 @@ const props = defineProps<{
 
 .contents_heading {
   @include contentsHeading;
-  margin-bottom: var(--sp-medium);
-  padding-top  : var(--sp-large);
+  margin-block-end   : var(--sp-medium);
+  padding-block-start: var(--sp-large);
 }
 
 .message_contents {
   @include contentInner;
-  width              : 100%;
+  inline-size        : 100%;
   background-image   : url('assets/images/bg-circle.png'), url('assets/images/bg-face.png');
   background-position: center center;
   background-repeat  : no-repeat;

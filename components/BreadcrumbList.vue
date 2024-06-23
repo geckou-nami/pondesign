@@ -3,8 +3,6 @@
 const props = defineProps<{
   currentSection: string
 }>()
-
-// ゆくゆくは、リンクの情報も、propsで受け取るようにする
 </script>
 
 <template>
@@ -21,10 +19,10 @@ const props = defineProps<{
 @use '~/assets/scss/mixin' as *;
 
 nav {
-  width           : 100%;
+  inline-size     : 100%;
   background-color: var(--lightgray);
   padding-block   : calc(var(--sp-medium) * 0.8);
-  z-index: calc(var(--z-index-header) - 1);
+  z-index         : calc(var(--z-index-header) - 1);
 }
 
 .breadcrumb {

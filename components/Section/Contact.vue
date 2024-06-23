@@ -135,8 +135,8 @@ const inputFields = [
 }
 
 form {
-  max-width       : 780px;
-  width           : 100%;
+  max-inline-size       : 780px;
+  inline-size           : 100%;
   display         : flex;
   flex-direction  : column;
   background-color: var(--gray-medium);
@@ -149,14 +149,13 @@ form {
     padding-block : calc(var(--sp-medium) * 2);
     padding-inline: calc(var(--sp-medium) * 2);
   }
-
 }
 
 .form_title {
-  font-size    : var(--sp-medium);
-  font-weight  : bold;
-  margin-top   : var(--sp-large);
-  margin-bottom: var(--sp-small);
+  font-size         : var(--sp-medium);
+  font-weight       : bold;
+  margin-block-start: var(--sp-large);
+  margin-block-end  : var(--sp-small);
 }
 
 .form_radio {
@@ -164,7 +163,7 @@ form {
   flex-wrap: wrap;
 
   > label {
-    margin-right: var(--sp-large);
+    margin-inline-end: var(--sp-large);
   }
 }
 
@@ -177,10 +176,10 @@ form {
 
 .input {
   @include formContents;
-  width: 300px;
+  inline-size: 300px;
 
   @include mediaScreen('tablet') {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
@@ -188,16 +187,16 @@ textarea {
   @include formContents;
 
   @include mediaScreen('tablet') {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
 select {
   @include formContents;
-  width: 300px;
+  inline-size: 300px;
 
   @include mediaScreen('tablet') {
-    width: 100%;
+    inline-size: 100%;
   }
 }
 
@@ -213,11 +212,11 @@ select {
 }
 
 .submit_button {
-  margin-top: var(--sp-larger);
-  align-self: center;
+  margin-block-start: var(--sp-larger);
+  align-self        : center;
 
   @include mediaScreen('tablet') {
-    margin-top: var(--sp-large);
+    margin-block-start: var(--sp-large);
   }
 }
 </style>

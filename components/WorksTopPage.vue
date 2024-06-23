@@ -10,7 +10,6 @@ const worksImages = [
   { image: image2,},
   { image: image3,}
 ]
-
 </script>
 
 <template>
@@ -51,12 +50,11 @@ const worksImages = [
 @use '~/assets/scss/mixin' as *;
 
 .container {
-  /* @include contentInner(); */
-  width         : 100%;
+  inline-size: 100%;
 
-  max-width: 1300px;
-  margin-inline : auto;
-  display: flex;
+  max-inline-size: 1300px;
+  margin-inline  : auto;
+  display        : flex;
 
   @include mediaScreen('tablet') {
     flex-direction: column;
@@ -64,66 +62,65 @@ const worksImages = [
 }
 
 .img_wrap {
-  max-width: 704px;
+  max-inline-size: 704px;
 
   img {
-    width     : 100%;
-    height    : 100%;
-    object-fit: cover;
+    inline-size: 100%;
+    block-size : 100%;
+    object-fit : cover;
   }
 }
 
-
 .slide {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 0;
+  transition   : opacity 0.5s ease-in-out;
+  opacity      : 0;
   padding-block: var(--sp-medium);
 
   @include mediaScreen('tablet') {
     margin-inline: auto;
-    padding: var(--sp-medium);
+    padding      : var(--sp-medium);
   }
 
-  > img {
-    width        : 100%;
-    height       : 100%;
-    object-fit   : cover;
+    > img {
+    inline-size: 100%;
+    block-size : 100%;
+    object-fit : cover;
   }
 }
 
 .text_wrap {
-  width: 100%;
-  flex:1;
-  display         : flex;
-  flex-direction  : column;
-  justify-content : center;
-  align-items     : center;
-  gap             : var(--sp-large);
-  padding-block   : calc(var(--sp-large) * 2);
-  padding-inline  : calc(var(--sp-large) * 2);
-  position: relative;
+  inline-size    : 100%;
+  flex           : 1;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+  gap            : var(--sp-large);
+  padding-block  : calc(var(--sp-large) * 2);
+  padding-inline : calc(var(--sp-large) * 2);
+  position       : relative;
 
   @include mediaScreen('tablet') {
     padding-block-start: 0;
   }
 
   &::after {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    z-index: -1;
-    display: block;
-    width: 150%;
-    height: 100%;
-    content: "";
+    position         : absolute;
+    top              : 50%;
+    right            : 0;
+    z-index          : -1;
+    display          : block;
+    inline-size      : 150%;
+    block-size       : 100%;
+    content          : "";
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background-color: var(--lightgray);
+    transform        : translateY(-50%);
+    background-color : var(--lightgray);
 
     @include mediaScreen('tablet') {
-      top: 0;
-      width: 100%;
-      height: 200%;
+      top        : 0;
+      inline-size: 100%;
+      block-size : 200%;
     }
   }
 }
@@ -135,35 +132,34 @@ const worksImages = [
   opacity: 1;
 }
 
-
   .carousel__prev {
-    width   : var(--carousel-button-size);
-    height  : var(--carousel-button-size);
-    color   : var(--purple);
-    position: absolute;
-    left    : 0;
-    margin  : 0;
+    inline-size: var(--carousel-button-size);
+    block-size : var(--carousel-button-size);
+    color      : var(--purple);
+    position   : absolute;
+    left       : 0;
+    margin     : 0;
   }
 
 
 .carousel__next {
-  width           : var(--carousel-button-size);
-  height          : var(--carousel-button-size);
-  color           : var(--purple);
-  position        : absolute;
-  right           : 0;
-  margin          : 0;
+  inline-size: var(--carousel-button-size);
+  block-size : var(--carousel-button-size);
+  color      : var(--purple);
+  position   : absolute;
+  right      : 0;
+  margin     : 0;
 }
 
 .carousel__pagination {
-  display         : flex;
-  justify-content : end;
-  margin-block: 0;
+  display        : flex;
+  justify-content: end;
+  margin-block   : 0;
 }
 
 .carousel__pagination-button {
-  width           : 6px;
-  height          : 6px;
+  inline-size     : 6px;
+  block-size      : 6px;
   margin          : 0 5px;
   border-radius   : 50%;
   background-color: var(--darkgray);
@@ -176,6 +172,6 @@ const worksImages = [
 
 .carousel__pagination-button--active {
   background-color: var(--black);
-  text-align: end;
+  text-align      : end;
 }
 </style>

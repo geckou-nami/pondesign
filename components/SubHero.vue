@@ -2,8 +2,7 @@
 const props = defineProps<{
   heading: string;
   subheading: string;
-}>();
-
+}>()
 </script>
 
 <template>
@@ -15,9 +14,9 @@ const props = defineProps<{
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang = "scss" module>
 .sub_hero  {
-  height             : 240px;
+  block-size         : 240px;
   background-image   : url('assets/images/hero.jpg');
   background-size    : cover;
   background-position: center;

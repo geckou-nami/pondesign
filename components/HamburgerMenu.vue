@@ -31,12 +31,12 @@ const isActive = ref(false)
 @use '~/assets/scss/mixin' as *;
 
 .menu_list {
-  width          : 100%;
-  height         : 100svh;
+  inline-size    : 100%;
+  block-size     : 100svh;
   background     : linear-gradient(135deg, #7633a4, #250d65);
   color          : white;
   font-weight    : bold;
-  display: none;
+  display        : none;
   justify-content: center;
   align-items    : center;
   text-align     : center;
@@ -61,14 +61,14 @@ const isActive = ref(false)
   position       : absolute;
   top            : calc(var(--sp-medium)* 1.2);
   right          : var(--sp-large);
-  width          : 30px;
-  height         : 20px;
+  inline-size    : 30px;
+  block-size     : 20px;
   display        : none;
   flex-direction : column;
   justify-content: space-between;
   cursor         : pointer;
-  z-index: var(--z-index-overlay);
-  display: none;
+  z-index        : var(--z-index-overlay);
+  display        : none;
 
   @include mediaScreen('tablet') {
     display: flex;
@@ -77,8 +77,8 @@ const isActive = ref(false)
 }
 
 .btn_bar {
-  width           : 100%;
-  height          : 2px;
+  inline-size     : 100%;
+  block-size      : 2px;
   background-color: var(--white);
   border-radius   : 2px;
 
